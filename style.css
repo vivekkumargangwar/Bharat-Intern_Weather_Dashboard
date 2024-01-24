@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: #F5F5F5;
+}
+
+h1 {
+  background: #19ab9e;
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 18px 0;
+  color: #e23b3b;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+}
+
+.weather-input {
+  width: 70%;
+  max-width: 400px;
+}
+
+.weather-input input {
+  height: 40px;
+  width: 100%;
+  outline: none;
+  font-size: 1rem;
+  padding: 10px;
+  margin: 10px 0 20px 0;
+  border-radius: 8px;
+  border: 1px solid #ff1919;
+  transition: border-color 0.3s ease;
+}
+
+.weather-input input:focus {
+  border-color: #000000;
+}
+
+.weather-input .separator {
+  text-align: center;
+  color: #5e0202;
+  margin: 20px 0;
+}
+
+.weather-input button {
+  width: 100%;
+  padding: 12px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  color: #ff8000;
+  background: #c90d3f;
+  transition: background 0.3s ease;
+}
+
+.weather-input .search-btn:hover {
+  background: #deeaf7;
+}
+
+.weather-input .location-btn {
+  background: #000000;
+}
+
+.weather-input .location-btn:hover {
+  background: #ff6464;
+}
+
+.weather-data {
+  width: 100%;
+}
+
+.weather-data .current-weather {
+  color: #9b9998;
+  background: #000000;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.weather-data h6 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.current-weather .icon img {
+  max-width: 80px;
+  margin-top: -10px;
+}
+
+.days-forecast h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+
+.days-forecast .weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.weather-cards .card {
+  color: #fff;
+  padding: 15px;
+  list-style: none;
+  width: calc(100% / 3 - 10px);
+  background: #000000;
+  border-radius: 8px;
+}
+
+.weather-cards .card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.weather-cards .card img {
+  max-width: 60px;
+  margin: 5px 0 -10px 0;
+}
+
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+  .container {
+    padding: 15px;
+  }
+  .weather-input {
+    width: 90%;
+    max-width: 300px;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}
